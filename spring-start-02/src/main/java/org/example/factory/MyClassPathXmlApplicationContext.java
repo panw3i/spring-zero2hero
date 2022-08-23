@@ -1,4 +1,4 @@
-package org.example;
+package org.example.factory;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -56,7 +56,7 @@ public class MyClassPathXmlApplicationContext implements MyFactory {
             // 4、通过xpath语法，获取beans标签下的所有bean标签
             XPath xPath = document.createXPath("beans/bean");
             // 通过指定语法解析文档对象，返回集合
-            List<Element> list =  xPath.selectNodes(document);
+            List<Element> list =  xPath.selectNodes(document,xPath);
             // 判断集合是否为空，遍历集合
             if (list != null && list.size() > 0) {
                 myBeans = new ArrayList<>();

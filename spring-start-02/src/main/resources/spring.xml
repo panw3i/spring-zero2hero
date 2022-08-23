@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <beans>
-    <bean id="bookService" class="org.example.BookService"/>
+    <bean id="bookService" class="org.example.service.BookService"/>
+    <import resource="test.xml"/>
 </beans>
