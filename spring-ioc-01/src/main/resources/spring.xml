@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="bookDao" class="org.example.BookDao"/>
+    <bean id="bookService" class="org.example.BookService">
+        <property name="bookDao" ref="bookDao"/>
+        <property name="bookName" value="Spring从入门到精通"/>
+        <property name="categories">
+
+<!--            list 注入-->
+            <list>
+                <value>Java</value>
+                <value>Spring</value>
+                <value>Spring Boot</value>
+                <value>Spring Cloud</value>
+
+            </list>
+
+<!--            map注入-->
+
+        </property>
+
+        <property name="authorList">
+            <map>
+                <entry key="author1" value="张三"/>
+                <entry key="author2" value="李四"/>
+            </map>
+        </property>
+
+
+<!--        properties 注入-->
+        <property name="properties">
+            <props>
+                <prop key="price">张三</prop>
+                <prop key="publish">清华大学</prop>
+            </props>
+        </property>
+
+    </bean>
+</beans>
