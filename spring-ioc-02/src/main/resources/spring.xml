@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--
+        IOC通过构造器注入：
+            通过constructor-arg标签进行注入
+                name：属性名称
+                ref：指定bean标签的id属性值
+    -->
+    <bean id="userDao" class="org.example.UserDao" />
+    <bean id="countDao" class="org.example.CountDao" />
+
+    <!--
+            IOC通过构造器注入：
+                通过constructor-arg标签进行注入
+                    name：属性名称
+                    ref：指定bean标签的id属性值
+                     value：基本类型 常用对象的值
+                    index：构造器中参数的下标，从0开始
+        -->
+    <bean id="userService" class="org.example.UserService">
+        <constructor-arg name="userDao" ref="userDao"/>
+        <constructor-arg name="countDao" ref="countDao"/>
+        <constructor-arg name="name" value="你好啊"/>
+    </bean>
+</beans>
