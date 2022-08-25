@@ -1,3 +1,5 @@
 - spring-start-01 起手式
 - spring-start-02 手动实现一个窗口
-- 
+- spring-ioc-01 xml IOC容器 xml
+- spring-ioc-02 xml IOC容器 xml list map properties
+- spring-ioc-03 xml IOC容器 xml @Resource
