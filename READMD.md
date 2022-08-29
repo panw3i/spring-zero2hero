@@ -4,3 +4,4 @@
 - spring-ioc-02 xml IOC容器  list map properties
 - spring-ioc-03 xml IOC容器  @Resource
 - spring-ioc-04 xml IOC容器  @Autowired  junit测试类
+- spring-component-scan  包扫描
