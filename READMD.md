@@ -5,3 +5,4 @@
 - spring-ioc-03 xml IOC容器  @Resource
 - spring-ioc-04 xml IOC容器  @Autowired  junit测试类
 - spring-component-scan  包扫描
+- spring-annotation-01  自定义注解
